@@ -1,0 +1,739 @@
+<!DOCTYPE html> 
+<html lang="vi"> <head> 
+    <meta charset="UTF-8"> 
+    <meta name="description" content="MusicStore - Cửa hàng nhạc cụ chính hãng"> 
+    <meta name="keywords" content="Guitar, Piano, Trống, Ukulele, Nhạc cụ"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>MusicStore | Cửa Hàng Nhạc Cụ</title> <link 
+href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=
+ swap" rel="stylesheet"> 
+ 
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"> 
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"> 
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css"> 
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css"> 
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css"> 
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css"> 
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css"> 
+    <link rel="stylesheet" href="css/style.css" type="text/css"> 
+</head> 
+ 
+<body> 
+    <div id="preloder"> 
+        <div class="loader"></div> 
+    </div> 
+ 
+    <div class="humberger__menu__overlay"></div> 
+    <div class="humberger__menu__wrapper"> 
+        <div class="humberger__menu__logo"> 
+            <a href="#"><img src="img/logo.png" alt=""></a> </div> 
+        <div class="humberger__menu__cart"> 
+            <ul> 
+                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> 
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li> 
+            </ul> 
+            <div class="header__cart__price">Giỏ hàng: <span>5.200.000đ</span></div> 
+</div> 
+        <div class="humberger__menu__widget"> 
+            <div class="header__top__right__language"> 
+                <img src="img/language.png" alt=""> 
+                <div>Tiếng Việt</div> <span class="arrow_carrot-down"></span> 
+                <ul> 
+                    <li><a href="#">Tiếng Việt</a></li> <li><a href="#">English</a></li> 
+                </ul> 
+            </div> 
+            <div class="header__top__right__auth"> 
+                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a> </div> 
+        </div> 
+        <nav class="humberger__menu__nav mobile-menu"> 
+            <ul> 
+                <li class="active"><a href="./index.html">Trang chủ</a></li> <li><a 
+href="./shop-grid.html">Sản phẩm</a></li> <li><a href="#">Trang khác</a> <ul 
+class="header__menu__dropdown"> 
+                        <li><a href="./shop-details.html">Chi tiết sản phẩm</a></li> <li><a 
+href="./shoping-cart.html">Giỏ hàng</a></li> <li><a href="./checkout.html">Thanh 
+toán</a></li> <li><a href="./blog-details.html">Chi tiết Blog</a></li> </ul> 
+                </li> 
+                <li><a href="./blog.html">Blog</a></li> 
+                <li><a href="./contact.html">Liên hệ</a></li> </ul> 
+        </nav> 
+        <div id="mobile-menu-wrap"></div> 
+        <div class="header__top__right__social"> 
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a> 
+            <a href="#"><i class="fa fa-linkedin"></i></a> 
+            <a href="#"><i class="fa fa-pinterest-p"></i></a> 
+        </div> 
+        <div class="humberger__menu__contact"> 
+            <ul> 
+                <li><i class="fa fa-envelope"></i> support@musicstore.vn</li> 
+                <li>Miễn phí vận chuyển cho đơn hàng trên 3.000.000đ</li> 
+            </ul> 
+        </div> 
+    </div> 
+    <header class="header"> 
+        <div class="header__top"> 
+            <div class="container"> 
+                <div class="row"> 
+                    <div class="col-lg-6 col-md-6"> 
+                        <div class="header__top__left"> 
+                            <ul> 
+                                <li><i class="fa fa-envelope"></i> support@musicstore.vn</li> 
+                                <li>Miễn phí vận chuyển cho đơn hàng trên 3.000.000đ</li> 
+                            </ul> 
+                        </div> 
+                    </div> 
+                    <div class="col-lg-6 col-md-6"> 
+                        <div class="header__top__right"> 
+                            <div class="header__top__right__social"> 
+                                <a href="#"><i class="fa fa-facebook"></i></a> 
+                                <a href="#"><i class="fa fa-twitter"></i></a> 
+                                <a href="#"><i class="fa fa-linkedin"></i></a> 
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a> 
+                            </div> 
+                            <div class="header__top__right__language"> 
+                                <img src="img/language.png" alt=""> 
+                                <div>Tiếng Việt</div> <span class="arrow_carrot-down"></span> 
+                                <ul> 
+                                    <li><a href="#">Tiếng Việt</a></li> <li><a href="#">English</a></li> 
+                                </ul> 
+                            </div> 
+                            <div class="header__top__right__auth"> 
+                                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a> </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-lg-3"> 
+                    <div class="header__logo"> 
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a> </div> 
+                </div> 
+                <div class="col-lg-6"> 
+                    <nav class="header__menu"> 
+                        <ul> 
+                            <li class="active"><a href="./index.html">Trang chủ</a></li> 
+                            <li><a href="./shop-grid.html">Sản phẩm</a></li> 
+                            <li><a href="#">Trang khác</a> 
+                                <ul class="header__menu__dropdown"> 
+                                    <li><a href="./shop-details.html">Chi tiết sản phẩm</a></li> 
+                                    <li><a href="./shoping-cart.html">Giỏ hàng</a></li> 
+                                    <li><a href="./checkout.html">Thanh toán</a></li> 
+                                    <li><a href="./blog-details.html">Chi tiết Blog</a></li> 
+                                </ul> 
+                            </li> 
+                            <li><a href="./blog.html">Blog</a></li> 
+                            <li><a href="./contact.html">Liên hệ</a></li> 
+                        </ul> 
+                    </nav> 
+                </div> 
+                <div class="col-lg-3"> 
+                    <div class="header__cart"> 
+                        <ul> 
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> 
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i> 
+<span>3</span></a></li> 
+                        </ul> 
+                        <div class="header__cart__price">Giỏ hàng: 
+<span>5.200.000đ</span></div> </div> 
+                </div> 
+            </div> 
+            <div class="humberger__open"> 
+                <i class="fa fa-bars"></i> 
+            </div> 
+        </div> 
+    </header> 
+    <section class="hero"> 
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-lg-3"> 
+                    <div class="hero__categories"> 
+                        <div class="hero__categories__all"> 
+                            <i class="fa fa-bars"></i> 
+                            <span>Danh Mục Nhạc Cụ</span> </div> 
+                        <ul> 
+                            <li><a href="#">Guitar Acoustic</a></li> 
+                            <li><a href="#">Guitar Electric</a></li> 
+                            <li><a href="#">Piano & Keyboard</a></li> 
+                            <li><a href="#">Trống & Percussion</a></li> 
+                            <li><a href="#">Ukulele</a></li> 
+                            <li><a href="#">Violin & Nhạc cụ dây</a></li> 
+                            <li><a href="#">Thiết bị Âm thanh</a></li> 
+                            <li><a href="#">Phụ kiện (Dây đàn, Amply)</a></li> 
+                            <li><a href="#">Sáo & Nhạc cụ hơi</a></li> 
+                            <li><a href="#">Nhạc cụ dân tộc</a></li> 
+                            <li><a href="#">Sách nhạc & Giáo trình</a></li> 
+                        </ul> 
+                    </div> 
+                </div> 
+                <div class="col-lg-9"> 
+                    <div class="hero__search"> 
+                        <div class="hero__search__form"> 
+                            <form action="#"> 
+                                <div class="hero__search__categories"> 
+                                    Tất cả <span class="arrow_carrot-down"></span> 
+                                </div> 
+                                <input type="text" placeholder="Bạn tìm nhạc cụ gì?"> <button 
+type="submit" class="site-btn">TÌM KIẾM</button> </form> 
+                        </div> 
+                        <div class="hero__search__phone"> 
+                            <div class="hero__search__phone__icon"> 
+                                <i class="fa fa-phone"></i> 
+                            </div> 
+                            <div class="hero__search__phone__text"> 
+                                <h5>1900 1234</h5> <span>Hỗ trợ 24/7</span> </div> 
+                        </div> 
+                    </div> 
+                    <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg"> 
+                        <div class="hero__text"> 
+                            <span>GIAI ĐIỆU CUỘC SỐNG</span> 
+                            <h2>Nhạc Cụ <br />Chính Hãng 100%</h2> 
+                            <p>Trả góp 0% & Bảo hành tận tâm</p> 
+                            <a href="#" class="primary-btn">MUA NGAY</a> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+    <section class="categories"> 
+        <div class="container"> 
+            <div class="row"> 
+                <div class="categories__slider owl-carousel"> 
+                    <div class="col-lg-3"> 
+                        <div class="categories__item set-bg" data-setbg="img/categories/cat1.jpg"> 
+                            <h5><a href="#">Guitar</a></h5> 
+                        </div> 
+                    </div> 
+                    <div class="col-lg-3"> 
+                        <div class="categories__item set-bg" data-setbg="img/categories/cat2.jpg"> 
+                            <h5><a href="#">Piano</a></h5> 
+                        </div> 
+                    </div> 
+                    <div class="col-lg-3"> 
+                        <div class="categories__item set-bg" data-setbg="img/categories/cat3.jpg"> 
+                            <h5><a href="#">Trống</a></h5> 
+                        </div> 
+                    </div> 
+                    <div class="col-lg-3"> 
+                        <div class="categories__item set-bg" data-setbg="img/categories/cat4.jpg"> 
+                            <h5><a href="#">Ukulele</a></h5> 
+                        </div> 
+                    </div> 
+                    <div class="col-lg-3"> 
+                        <div class="categories__item set-bg" data-setbg="img/categories/cat5.jpg"> 
+                            <h5><a href="#">Phụ Kiện</a></h5> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+    <section class="featured spad"> 
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-lg-12"> 
+                    <div class="section-title"> 
+                        <h2>Sản Phẩm Nổi Bật</h2> </div> 
+                    <div class="featured__controls"> 
+                        <ul> 
+                            <li class="active" data-filter="*">Tất cả</li> 
+                            <li data-filter=".guitar">Guitar</li> 
+                            <li data-filter=".piano">Piano</li> 
+                            <li data-filter=".drums">Trống</li> 
+                            <li data-filter=".accessory">Phụ Kiện</li> 
+                        </ul> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="row featured__filter"> 
+                <div class="col-lg-3 col-md-4 col-sm-6 mix guitar"> 
+                    <div class="featured__item"> 
+                        <div class="featured__item__pic set-bg" 
+data-setbg="img/featured/feature_1.jpg"> 
+                            <ul class="featured__item__pic__hover"> 
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
+                            </ul> 
+                        </div> 
+                        <div class="featured__item__text"> 
+                            <h6><a href="#">Guitar Acoustic Taylor 214ce</a></h6> 
+                            <h5>28.000.000đ</h5> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-3 col-md-4 col-sm-6 mix piano"> 
+                    <div class="featured__item"> 
+                        <div class="featured__item__pic set-bg" 
+data-setbg="img/featured/feature_2.jpg"> 
+                            <ul class="featured__item__pic__hover"> 
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
+                            </ul> 
+                        </div> 
+                        <div class="featured__item__text"> 
+                            <h6><a href="#">Keyboard Yamaha PSR-E373</a></h6> 
+                            <h5>5.200.000đ</h5> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-3 col-md-4 col-sm-6 mix drums"> 
+                    <div class="featured__item"> 
+                        <div class="featured__item__pic set-bg" 
+data-setbg="img/featured/feature_3.jpg"> 
+                            <ul class="featured__item__pic__hover"> 
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
+                            </ul> 
+                        </div> 
+                        <div class="featured__item__text"> 
+                            <h6><a href="#">Trống điện Roland TD-07</a></h6> 
+                            <h5>25.000.000đ</h5> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-3 col-md-4 col-sm-6 mix accessory guitar"> 
+                    <div class="featured__item"> 
+                        <div class="featured__item__pic set-bg" 
+data-setbg="img/featured/feature_4.jpg"> 
+                            <ul class="featured__item__pic__hover"> 
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
+                            </ul> 
+                        </div> 
+                        <div class="featured__item__text"> 
+                            <h6><a href="#">Amply Fender Mustang LT25</a></h6> 
+                            <h5>4.500.000đ</h5> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-3 col-md-4 col-sm-6 mix guitar"> 
+                    <div class="featured__item"> 
+                        <div class="featured__item__pic set-bg" 
+data-setbg="img/featured/feature_5.jpg"> 
+                            <ul class="featured__item__pic__hover"> 
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
+                            </ul> 
+                        </div> 
+                        <div class="featured__item__text"> 
+                            <h6><a href="#">Guitar Electric Fender Strat</a></h6> 
+                            <h5>22.000.000đ</h5> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-3 col-md-4 col-sm-6 mix piano"> 
+                    <div class="featured__item"> 
+                        <div class="featured__item__pic set-bg" 
+data-setbg="img/featured/feature_6.jpg"> 
+                            <ul class="featured__item__pic__hover"> 
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
+                            </ul> 
+                        </div> 
+                        <div class="featured__item__text"> 
+                            <h6><a href="#">Piano điện Kawai KDP120</a></h6> 
+                            <h5>21.500.000đ</h5> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-3 col-md-4 col-sm-6 mix accessory"> 
+                    <div class="featured__item"> 
+                        <div class="featured__item__pic set-bg" 
+data-setbg="img/featured/feature_7.jpg"> 
+                            <ul class="featured__item__pic__hover"> 
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
+                            </ul> 
+                        </div> 
+                        <div class="featured__item__text"> 
+                            <h6><a href="#"> Focusrite Scarlett 2i2</a></h6> 
+                            <h5>4.200.000đ</h5> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-3 col-md-4 col-sm-6 mix guitar"> 
+                    <div class="featured__item"> 
+                        <div class="featured__item__pic set-bg" 
+data-setbg="img/featured/feature_8.jpg"> 
+                            <ul class="featured__item__pic__hover"> 
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
+                            </ul> 
+                        </div> 
+                        <div class="featured__item__text"> 
+                            <h6><a href="#">Ukulele Enya X1 Pro</a></h6> 
+                            <h5>2.100.000đ</h5> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+    <div class="banner"> 
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-lg-6 col-md-6 col-sm-6"> 
+                    <div class="banner__pic"> 
+                        <img src="img/banner/banner1.jpg" alt=""> 
+                    </div> 
+                </div> 
+                <div class="col-lg-6 col-md-6 col-sm-6"> 
+                    <div class="banner__pic"> 
+                        <img src="img/banner/banner2.jpg" alt=""> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <section class="latest-product spad"> 
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-lg-4 col-md-6"> 
+                    <div class="latest-product__text"> 
+                        <h4>Hàng Mới Về</h4> <div class="latest-product__slider owl-carousel"> 
+                            <div class="latest-prdouct__slider__item"> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/latest-product/lp1.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Micro Shure SM58</h6> 
+                                        <span>2.800.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/latest-product/lp2.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Violin Lazer 4/4</h6> 
+                                        <span>3.100.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/latest-product/lp3.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Dây đàn Elixir</h6> 
+                                        <span>450.000đ</span> 
+                                    </div> 
+                                </a> 
+                            </div> 
+                            <div class="latest-prdouct__slider__item"> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/latest-product/lp4.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Trống Cajon</h6> 
+                                        <span>1.200.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/latest-product/lp5.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Kalimba 17 phím</h6> 
+                                        <span>500.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/latest-product/lp6.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Midi Controller Akai MPK</h6> 
+                                        <span>3.500.000đ</span> 
+                                    </div> 
+                                </a> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-4 col-md-6"> 
+                    <div class="latest-product__text"> 
+                        <h4>Bán Chạy Nhất</h4> <div class="latest-product__slider owl-carousel"> 
+                            <div class="latest-prdouct__slider__item"> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/best-seller/bs1.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Guitar Acoustic Kapok</h6> 
+                                        <span>1.800.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/best-seller/bs2.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Keyboard Yamaha PSR-E373</h6> 
+                                        <span>5.200.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/best-seller/bs3.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Dây đàn Elixir</h6> 
+                                        <span>450.000đ</span> 
+                                    </div> 
+                                </a> 
+                            </div> 
+                            <div class="latest-prdouct__slider__item"> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/best-seller/bs4.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Ukulele Enya X1</h6> 
+                                        <span>1.900.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/best-seller/bs5.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Focusrite Scarlett 2i2</h6> 
+                                        <span>4.200.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/best-seller/bs6.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Trống Cajon</h6> 
+                                        <span>1.200.000đ</span> 
+                                    </div> 
+                                </a> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-4 col-md-6"> 
+                    <div class="latest-product__text"> 
+                        <h4>Đang Giảm Giá</h4> <div class="latest-product__slider owl-carousel"> 
+                            <div class="latest-prdouct__slider__item"> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/discount/ds1.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Guitar Classic C-40</h6> 
+                                        <span>2.500.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/discount/ds2.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Amply NUX AC-25</h6> 
+                                        <span>3.400.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/discount/ds3.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Kalimba 17 phím</h6> 
+                                        <span>500.000đ</span> 
+                                    </div> 
+                                </a> 
+                            </div> 
+                            <div class="latest-prdouct__slider__item"> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/discount/ds4.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Máy lên dây Tuner</h6> 
+                                        <span>150.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/discount/ds5.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Sáo trúc</h6> 
+                                        <span>200.000đ</span> 
+                                    </div> 
+                                </a> 
+                                <a href="#" class="latest-product__item"> 
+                                    <div class="latest-product__item__pic"> 
+                                        <img src="img/discount/ds6.jpg" alt=""> 
+                                    </div> 
+                                    <div class="latest-product__item__text"> 
+                                        <h6>Dùi trống Zildjian</h6> 
+                                        <span>350.000đ</span> 
+                                    </div> 
+                                </a> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+    <section class="from-blog spad"> 
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-lg-12"> 
+                    <div class="section-title from-blog__title"> 
+                        <h2>Tin Tức & Blog</h2> </div> 
+                </div> 
+            </div> 
+            <div class="row"> 
+                <div class="col-lg-4 col-md-4 col-sm-6"> 
+                    <div class="blog__item"> 
+                        <div class="blog__item__pic"> 
+                            <img src="img/blog/blog1.jpg" alt=""> 
+                        </div> 
+                        <div class="blog__item__text"> 
+                            <ul> 
+                                <li><i class="fa fa-calendar-o"></i> 06, T11, 2025</li> 
+                                <li><i class="fa fa-comment-o"></i> 5</li> 
+                            </ul> 
+                            <h5><a href="#">Cách chọn đàn guitar cho người mới</a></h5> 
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore 
+magnam aliquam quaerat </p> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-4 col-md-4 col-sm-6"> 
+                    <div class="blog__item"> 
+                        <div class="blog__item__pic"> 
+                            <img src="img/blog/blog2.jpg" alt=""> 
+                        </div> 
+                        <div class="blog__item__text"> 
+                            <ul> 
+                                <li><i class="fa fa-calendar-o"></i> 05, T11, 2025</li> 
+                                <li><i class="fa fa-comment-o"></i> 8</li> 
+                            </ul> 
+                            <h5><a href="#">Top 5 Keyboard tốt nhất 2025</a></h5> 
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore 
+magnam aliquam quaerat </p> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="col-lg-4 col-md-4 col-sm-6"> 
+                    <div class="blog__item"> 
+                        <div class="blog__item__pic"> 
+                            <img src="img/blog/blog3.jpg" alt=""> 
+                        </div> 
+                        <div class="blog__item__text"> 
+                            <ul> 
+                                <li><i class="fa fa-calendar-o"></i> 04, T11, 2025</li> 
+                                <li><i class="fa fa-comment-o"></i> 12</li> 
+                            </ul> 
+                            <h5><a href="#">Tự học piano tại nhà: Hướng dẫn</a></h5> 
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore 
+magnam aliquam quaerat </p> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+    <footer class="footer spad"> 
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-lg-3 col-md-6 col-sm-6"> 
+                    <div class="footer__about"> 
+                        <div class="footer__about__logo"> 
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a> 
+                        </div> 
+                        <ul> 
+                            <li>Địa chỉ: 123 Đường CMT8, Q3, TP.HCM</li> 
+                            <li>Phone: 1900 1234</li> 
+                            <li>Email: support@musicstore.vn</li> 
+                        </ul> 
+                    </div> 
+                </div> 
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1"> 
+                    <div class="footer__widget"> 
+                        <h6>Liên kết Hữu ích</h6> 
+                        <ul> 
+                            <li><a href="#">Về chúng tôi</a></li> 
+                            <li><a href="#">Chính sách bảo hành</a></li> 
+                            <li><a href="#">Chính sách đổi trả</a></li> 
+                            <li><a href="#">Thông tin giao hàng</a></li> 
+                            <li><a href="#">Chính sách bảo mật</a></li> 
+                            <li><a href="#">Hướng dẫn trả góp</a></li> 
+                        </ul> 
+                        <ul> 
+                            <li><a href="#">Hệ thống cửa hàng</a></li> 
+                            <li><a href="#">Dịch vụ sửa chữa</a></li> 
+                            <li><a href="#">Tuyển dụng</a></li> 
+                            <li><a href="#">Liên hệ</a></li> 
+                            <li><a href="#">Tin tức</a></li> 
+                            <li><a href="#">Hỏi đáp</a></li> 
+                        </ul> 
+                    </div> 
+                </div> 
+                <div class="col-lg-4 col-md-12"> 
+                    <div class="footer__widget"> 
+                        <h6>Đăng ký Nhận tin</h6> 
+                        <p>Nhận thông tin về sản phẩm mới và các chương trình khuyến mãi.</p> 
+                        <form action="#"> 
+                            <input type="text" placeholder="Nhập email của bạn"> 
+                            <button type="submit" class="site-btn">Đăng ký</button> 
+                        </form> 
+                        <div class="footer__widget__social"> 
+                            <a href="#"><i class="fa fa-facebook"></i></a> 
+                            <a href="#"><i class="fa fa-instagram"></i></a> 
+                            <a href="#"><i class="fa fa-twitter"></i></a> 
+                            <a href="#"><i class="fa fa-pinterest"></i></a> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="row"> 
+                <div class="col-lg-12"> 
+                    <div class="footer__copyright"> 
+                        <div class="footer__copyright__text"><p>Copyright 
+&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This 
+template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a 
+href="https://colorlib.com" target="_blank">Colorlib</a> 
+  </p></div> 
+                        <div class="footer__copyright__payment"><img src="img/payment-item.png" 
+alt=""></div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </footer> 
+    <script src="js/jquery-3.3.1.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/jquery.nice-select.min.js"></script> 
+    <script src="js/jquery-ui.min.js"></script> 
+    <script src="js/jquery.slicknav.js"></script> 
+    <script src="js/mixitup.min.js"></script> 
+    <script src="js/owl.carousel.min.js"></script> 
+    <script src="js/main.js"></script> 
+ 
+ 
+ 
+</body> 
+ 
+</html> 
