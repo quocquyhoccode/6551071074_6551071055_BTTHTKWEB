@@ -1,785 +1,952 @@
-<!DOCTYPE html> 
-<html lang="vi"> <head> 
-    <meta charset="UTF-8"> 
-    <meta name="description" content="MusicStore - Danh sách sản phẩm"> 
-    <meta name="keywords" content="Guitar, Piano, Trống, Ukulele, Nhạc cụ"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-    <title>MusicStore | Sản Phẩm</title> <link 
-href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=
- swap" rel="stylesheet"> 
- 
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"> 
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"> 
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css"> 
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css"> 
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css"> 
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css"> 
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css"> 
-    <link rel="stylesheet" href="css/style.css" type="text/css"> 
-</head> 
- 
-<body> 
-    <div id="preloder"> 
-        <div class="loader"></div> 
-    </div> 
- 
-    <div class="humberger__menu__overlay"></div> 
-    <div class="humberger__menu__wrapper"> 
-        <div class="humberger__menu__logo"> 
-            <a href="#"><img src="img/logo.png" alt=""></a> 
-        </div> 
-        <div class="humberger__menu__cart"> 
-            <ul> 
-                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> 
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li> 
-            </ul> 
-            <div class="header__cart__price">Giỏ hàng: <span>5.200.000đ</span></div> 
-        </div> 
-        <div class="humberger__menu__widget"> 
-            <div class="header__top__right__language"> 
-                <img src="img/language.png" alt=""> 
-                <div>Tiếng Việt</div> 
-                <span class="arrow_carrot-down"></span> 
-                <ul> 
-                    <li><a href="#">Tiếng Việt</a></li> 
-                    <li><a href="#">English</a></li> 
-                </ul> 
-            </div> 
-            <div class="header__top__right__auth"> 
-                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a> 
-            </div> 
-        </div> 
-        <nav class="humberger__menu__nav mobile-menu"> 
-            <ul> 
-                <li><a href="./index.html">Trang chủ</a></li> 
-                <li class="active"><a href="./shop-grid.html">Sản phẩm</a></li> <li><a 
-href="#">Trang khác</a> 
-                    <ul class="header__menu__dropdown"> 
-                        <li><a href="./shop-details.html">Chi tiết sản phẩm</a></li> 
-                        <li><a href="./shoping-cart.html">Giỏ hàng</a></li> 
-                        <li><a href="./checkout.html">Thanh toán</a></li> 
-                        <li><a href="./blog-details.html">Chi tiết Blog</a></li> 
-                    </ul> 
-                </li> 
-                <li><a href="./blog.html">Blog</a></li> 
-                <li><a href="./contact.html">Liên hệ</a></li> 
-            </ul> 
-        </nav> 
-        <div id="mobile-menu-wrap"></div> 
-        <div class="header__top__right__social"> 
-            <a href="#"><i class="fa fa-facebook"></i></a> 
-            <a href="#"><i class="fa fa-twitter"></i></a> 
-            <a href="#"><i class="fa fa-linkedin"></i></a> 
-            <a href="#"><i class="fa fa-pinterest-p"></i></a> 
-        </div> 
-        <div class="humberger__menu__contact"> 
-            <ul> 
-                <li><i class="fa fa-envelope"></i> support@musicstore.vn</li> 
-                <li>Miễn phí vận chuyển cho đơn hàng trên 3.000.000đ</li> 
-            </ul> 
-        </div> 
-    </div> 
-    <header class="header"> 
-        <div class="header__top"> 
-            <div class="container"> 
-                <div class="row"> 
-                    <div class="col-lg-6"> 
-                        <div class="header__top__left"> 
-                            <ul> 
-                                <li><i class="fa fa-envelope"></i> support@musicstore.vn</li> 
-                                <li>Miễn phí vận chuyển cho đơn hàng trên 3.000.000đ</li> 
-                            </ul> 
-                        </div> 
-                    </div> 
-                    <div class="col-lg-6"> 
-                        <div class="header__top__right"> 
-                            <div class="header__top__right__social"> 
-                                <a href="#"><i class="fa fa-facebook"></i></a> 
-                                <a href="#"><i class="fa fa-twitter"></i></a> 
-                                <a href="#"><i class="fa fa-linkedin"></i></a> 
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a> 
-                            </div> 
-                            <div class="header__top__right__language"> 
-                                <img src="img/language.png" alt=""> 
-                                <div>Tiếng Việt</div> 
-                                <span class="arrow_carrot-down"></span> 
-                                <ul> 
-                                    <li><a href="#">Tiếng Việt</a></li> 
-                                    <li><a href="#">English</a></li> 
-                                </ul> 
-                            </div> 
-                            <div class="header__top__right__auth"> 
-                                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a> 
-                            </div> 
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-        <div class="container"> 
-            <div class="row"> 
-                <div class="col-lg-3"> 
-                    <div class="header__logo"> 
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a> 
-                    </div> 
-                </div> 
-                <div class="col-lg-6"> 
-                    <nav class="header__menu"> 
-                        <ul> 
-                            <li><a href="./index.html">Trang chủ</a></li> 
-                            <li class="active"><a href="./shop-grid.html">Sản phẩm</a></li> <li><a 
-href="#">Trang khác</a> 
-                                <ul class="header__menu__dropdown"> 
-                                    <li><a href="./shop-details.html">Chi tiết sản phẩm</a></li> 
-                                    <li><a href="./shoping-cart.html">Giỏ hàng</a></li> 
-                                    <li><a href="./checkout.html">Thanh toán</a></li> 
-                                    <li><a href="./blog-details.html">Chi tiết Blog</a></li> 
-                                </ul> 
-                            </li> 
-                            <li><a href="./blog.html">Blog</a></li> 
-                            <li><a href="./contact.html">Liên hệ</a></li> 
-                        </ul> 
-                    </nav> 
-                </div> 
-                <div class="col-lg-3"> 
-                    <div class="header__cart"> 
-                        <ul> 
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li> 
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> 
-<span>3</span></a></li> 
-                        </ul> 
-                        <div class="header__cart__price">Giỏ hàng: 
-<span>5.200.000đ</span></div> 
-                    </div> 
-                </div> 
-            </div> 
-            <div class="humberger__open"> 
-                <i class="fa fa-bars"></i> 
-            </div> 
-        </div> 
-    </header> 
-    <section class="hero hero-normal"> 
-        <div class="container"> 
-            <div class="row"> 
-                <div class="col-lg-3"> 
-                    <div class="hero__categories"> 
-                        <div class="hero__categories__all"> 
-                            <i class="fa fa-bars"></i> 
-                            <span>Danh Mục Nhạc Cụ</span> 
-                        </div> 
-                        <ul> 
-                            <li><a href="#">Guitar Acoustic</a></li> 
-                            <li><a href="#">Guitar Electric</a></li> 
-                            <li><a href="#">Piano & Keyboard</a></li> 
-                            <li><a href="#">Trống & Percussion</a></li> 
-                            <li><a href="#">Ukulele</a></li> 
-                            <li><a href="#">Violin & Nhạc cụ dây</a></li> 
-                            <li><a href="#">Thiết bị Âm thanh</a></li> 
-                            <li><a href="#">Phụ kiện (Dây đàn, Amply)</a></li> 
-                            <li><a href="#">Sáo & Nhạc cụ hơi</a></li> 
-                            <li><a href="#">Nhạc cụ dân tộc</a></li> 
-                            <li><a href="#">Sách nhạc & Giáo trình</a></li> 
-                        </ul> 
-                    </div> 
-                </div> 
-                <div class="col-lg-9"> 
-                    <div class="hero__search"> 
-                        <div class="hero__search__form"> 
-                            <form action="#"> 
-                                <div class="hero__search__categories"> 
-                                    Tất cả 
-                                    <span class="arrow_carrot-down"></span> 
-                                </div> 
-                                <input type="text" placeholder="Bạn tìm nhạc cụ gì?"> 
-                                <button type="submit" class="site-btn">TÌM KIẾM</button> 
-                            </form> 
-                        </div> 
-                        <div class="hero__search__phone"> 
-                            <div class="hero__search__phone__icon"> 
-                                <i class="fa fa-phone"></i> 
-                            </div> 
-                            <div class="hero__search__phone__text"> 
-                                <h5>1900 1234</h5> 
-                                <span>Hỗ trợ 24/7</span> 
-                            </div> 
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-    </section> 
-    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg"> 
-        <div class="container"> 
-            <div class="row"> 
-                <div class="col-lg-12 text-center"> 
-                    <div class="breadcrumb__text"> 
-                        <h2>Cửa Hàng MusicStore</h2> 
-                        <div class="breadcrumb__option"> 
-                            <a href="./index.html">Trang chủ</a> 
-                            <span>Sản phẩm</span> 
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-    </section> 
-    <section class="product spad"> 
-        <div class="container"> 
-            <div class="row"> 
-                <div class="col-lg-3 col-md-5"> 
-                    <div class="sidebar"> 
-                        <div class="sidebar__item"> 
-                            <h4>Danh Mục</h4> <ul> 
-                                <li><a href="#">Guitar Acoustic</a></li> 
-                                <li><a href="#">Guitar Electric</a></li> 
-                                <li><a href="#">Piano & Keyboard</a></li> 
-                                <li><a href="#">Trống & Percussion</a></li> 
-                                <li><a href="#">Ukulele</a></li> 
-                                <li><a href="#">Violin & Nhạc cụ dây</a></li> 
-                                <li><a href="#">Thiết bị Âm thanh</a></li> 
-                                <li><a href="#">Phụ kiện</a></li> 
-                                <li><a href="#">Sáo & Nhạc cụ hơi</a></li> 
-                                <li><a href="#">Nhạc cụ dân tộc</a></li> 
-                            </ul> 
-                        </div> 
-                        <div class="sidebar__item"> 
-                            <h4>Lọc theo giá</h4> <div class="price-range-wrap"> 
-                                <div class="price-range ui-slider ui-corner-all ui-slider-horizontal 
-ui-widget ui-widget-content" 
-                                    data-min="500" data-max="50000"> <div class="ui-slider-range 
-ui-corner-all ui-widget-header"></div> 
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all 
-ui-state-default"></span> 
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all 
-ui-state-default"></span> 
-                                </div> 
-                                <div class="range-slider"> 
-                                    <div class="price-input"> 
-                                        <input type="text" id="minamount"> 
-                                        <input type="text" id="maxamount"> 
-                                    </div> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="sidebar__item sidebar__item__color--option"> 
-                            <h4>Thương Hiệu</h4> <div class="sidebar__item__color 
-sidebar__item__color--white"> 
-                                <label for="fender"> 
-                                    Fender 
-                                    <input type="radio" id="fender"> 
-                                </label> 
-                            </div> 
-                            <div class="sidebar__item__color sidebar__item__color--gray"> 
-                                <label for="yamaha"> 
-                                    Yamaha 
-                                    <input type="radio" id="yamaha"> 
-                                </label> 
-                            </div> 
-                            <div class="sidebar__item__color sidebar__item__color--red"> 
-                                <label for="roland"> 
-                                    Roland 
-                                    <input type="radio" id="roland"> 
-                                </label> 
-                            </div> 
-                            <div class="sidebar__item__color sidebar__item__color--black"> 
-                                <label for="taylor"> 
-                                    Taylor 
-                                    <input type="radio" id="taylor"> 
-                                </label> 
-                            </div> 
-                            <div class="sidebar__item__color sidebar__item__color--blue"> 
-                                <label for="casio"> 
-                                    Casio 
-                                    <input type="radio" id="casio"> 
-                                </label> 
-                            </div> 
-                            <div class="sidebar__item__color sidebar__item__color--green"> 
-                                <label for="kawai"> 
-                                    Kawai 
-                                    <input type="radio" id="kawai"> 
-                                </label> 
-                            </div> 
-                        </div> 
-                        <div class="sidebar__item"> 
-                            <h4>Tình Trạng</h4> <div class="sidebar__item__size"> 
-                                <label for="new"> 
-                                    Hàng mới 
-                                    <input type="radio" id="new"> 
-                                </label> 
-                            </div> 
-                            <div class="sidebar__item__size"> 
-                                <label for="sale"> 
-                                    Giảm giá 
-                                    <input type="radio" id="sale"> 
-                                </label> 
-                            </div> 
-                            <div class="sidebar__item__size"> 
-                                <label for="bestseller"> 
-                                    Bán chạy 
-                                    <input type="radio" id="bestseller"> 
-                                </label> 
-                            </div> 
-                        </div> 
-                        <div class="sidebar__item"> 
-                            <div class="latest-product__text"> 
-                                <h4>Hàng Mới Về</h4> <div class="latest-product__slider 
-owl-carousel"> 
-                                    <div class="latest-prdouct__slider__item"> 
-                                        <a href="#" class="latest-product__item"> 
-                                            <div class="latest-product__item__pic"> 
-                                                <img src="img/latest-product/lp1.jpg" alt=""> 
-                                            </div> 
-                                            <div class="latest-product__item__text"> 
-                                                <h6>Micro Shure SM58</h6> 
-                                                <span>2.800.000đ</span> 
-                                            </div> 
-                                        </a> 
-                                        <a href="#" class="latest-product__item"> 
-                                            <div class="latest-product__item__pic"> 
-                                                <img src="img/latest-product/lp2.jpg" alt=""> 
-                                            </div> 
-                                            <div class="latest-product__item__text"> 
-                                                <h6>Violin Lazer 4/4</h6> 
-                                                <span>3.100.000đ</span> 
-                                            </div> 
-                                        </a> 
-                                        <a href="#" class="latest-product__item"> 
-                                            <div class="latest-product__item__pic"> 
-                                                <img src="img/latest-product/lp3.jpg" alt=""> 
-                                            </div> 
-                                            <div class="latest-product__item__text"> 
-                                                <h6>Dây đàn Elixir</h6> 
-                                                <span>450.000đ</span> 
-                                            </div> 
-                                        </a> 
-                                    </div> 
-                                    <div class="latest-prdouct__slider__item"> 
-                                        <a href="#" class="latest-product__item"> 
-                                            <div class="latest-product__item__pic"> 
-                                                <img src="img/latest-product/lp4.jpg" alt=""> 
-                                            </div> 
-                                            <div class="latest-product__item__text"> 
-                                                <h6>Trống Cajon</h6> 
-                                                <span>1.200.000đ</span> 
-                                            </div> 
-                                        </a> 
-                                        <a href="#" class="latest-product__item"> 
-                                            <div class="latest-product__item__pic"> 
-                                                <img src="img/latest-product/lp5.jpg" alt=""> 
-                                            </div> 
-                                            <div class="latest-product__item__text"> 
-                                                <h6>Kalimba 17 phím</h6> 
-                                                <span>500.000đ</span> 
-                                            </div> 
-                                        </a> 
-                                        <a href="#" class="latest-product__item"> 
-                                            <div class="latest-product__item__pic"> 
-                                                <img src="img/latest-product/lp6.jpg" alt=""> 
-                                            </div> 
-                                            <div class="latest-product__item__text"> 
-                                                <h6>Midi Controller Akai</h6> 
-                                                <span>3.500.000đ</span> 
-                                            </div> 
-                                        </a> 
-                                    </div> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                </div> 
-                <div class="col-lg-9 col-md-7"> 
-                    <div class="product__discount"> 
-                        <div class="section-title product__discount__title"> 
-                            <h2>Đang Giảm Giá</h2> </div> 
-                        <div class="row"> 
-                            <div class="product__discount__slider owl-carousel"> 
-                                <div class="col-lg-4"> 
-                                    <div class="product__discount__item"> 
-                                        <div class="product__discount__item__pic set-bg" 
-                                            data-setbg="img/product/discount/pd-1.jpg"> 
-                                            <div class="product__discount__percent">-20%</div> 
-                                            <ul class="product__item__pic__hover"> 
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                            </ul> 
-                                        </div> 
-                                        <div class="product__discount__item__text"> 
-                                            <span>Guitar</span> 
-                                            <h5><a href="#">Guitar Classic C-40</a></h5> 
-                                            <div class="product__item__price">2.500.000đ 
-<span>3.100.000đ</span></div> 
-                                        </div> 
-                                    </div> 
-                                </div> 
-                                <div class="col-lg-4"> 
-                                    <div class="product__discount__item"> 
-                                        <div class="product__discount__item__pic set-bg" 
-                                            data-setbg="img/product/discount/pd-2.jpg"> 
-                                            <div class="product__discount__percent">-15%</div> 
-                                            <ul class="product__item__pic__hover"> 
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                            </ul> 
-                                        </div> 
-                                        <div class="product__discount__item__text"> 
-                                            <span>Ukulele</span> 
-                                            <h5><a href="#">Ukulele Concert</a></h5> 
-                                            <div class="product__item__price">1.200.000đ 
-<span>1.400.000đ</span></div> 
-                                        </div> 
-                                    </div> 
-                                </div> 
-                                <div class="col-lg-4"> 
-                                    <div class="product__discount__item"> 
-                                        <div class="product__discount__item__pic set-bg" 
-                                            data-setbg="img/product/discount/pd-3.jpg"> 
-                                            <div class="product__discount__percent">-10%</div> 
-                                            <ul class="product__item__pic__hover"> 
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                            </ul> 
-                                        </div> 
-                                        <div class="product__discount__item__text"> 
-                                            <span>Phụ kiện</span> 
-                                            <h5><a href="#">Amply NUX AC-25</a></h5> 
-                                            <div class="product__item__price">3.400.000đ 
-<span>3.800.000đ</span></div> 
-                                        </div> 
-                                    </div> 
-                                </div> 
-                                <div class="col-lg-4"> 
-                                    <div class="product__discount__item"> 
-                                        <div class="product__discount__item__pic set-bg" 
-                                            data-setbg="img/product/discount/pd-4.jpg"> 
-                                            <div class="product__discount__percent">-25%</div> 
-                                            <ul class="product__item__pic__hover"> 
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                            </ul> 
-                                        </div> 
-                                        <div class="product__discount__item__text"> 
-                                            <span>Phụ kiện</span> 
-                                            <h5><a href="#">Máy lên dây Tuner</a></h5> 
-                                            <div class="product__item__price">150.000đ 
-<span>200.000đ</span></div> 
-                                        </div> 
-                                    </div> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <div class="filter__item"> 
-                        <div class="row"> 
-                            <div class="col-lg-4 col-md-5"> 
-                                <div class="filter__sort"> 
-                                    <span>Sắp xếp theo</span> <select> 
-                                        <option value="0">Mặc định</option> 
-                                        <option value="0">Giá: Thấp đến Cao</option> 
-                                        <option value="0">Giá: Cao đến Thấp</option> 
-                                        <option value="0">Tên: A-Z</option> 
-                                    </select> 
-                                </div> 
-                            </div> 
-                            <div class="col-lg-4 col-md-4"> 
-                                <div class="filter__found"> 
-                                    <h6><span>12</span> sản phẩm được tìm thấy</h6> </div> 
-                            </div> 
-                            <div class="col-lg-4 col-md-3"> 
-                                <div class="filter__option"> 
-                                    <span class="icon_grid-2x2"></span> 
-                                    <span class="icon_ul"></span> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <div class="row"> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-1.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Guitar Acoustic Taylor 214ce</a></h6> 
-                                    <h5>28.000.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-2.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Keyboard Yamaha E373</a></h6> 
-                                    <h5>5.200.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-3.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Trống điện Roland TD-07</a></h6> 
-                                    <h5>25.000.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-4.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Amply Fender Mustang LT25</a></h6> 
-                                    <h5>4.500.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-5.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Guitar Electric Fender Strat</a></h6> 
-                                    <h5>22.000.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-6.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Piano điện Kawai KDP120</a></h6> 
-                                    <h5>21.500.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-7.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Focusrite Scarlett 2i2</a></h6> 
-                                    <h5>4.200.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-8.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Ukulele Enya X1 Pro</a></h6> 
-                                    <h5>2.100.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-9.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Micro Shure SM58</a></h6> 
-                                    <h5>2.800.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-10.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Violin Lazer 4/4</a></h6> 
-                                    <h5>3.100.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-11.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Trống Cajon</a></h6> 
-                                    <h5>1.200.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-lg-4 col-md-6 col-sm-6"> 
-                            <div class="product__item"> 
-                                <div class="product__item__pic set-bg" 
-data-setbg="img/product/product-12.jpg"> 
-                                    <ul class="product__item__pic__hover"> 
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
-                                    </ul> 
-                                </div> 
-                                <div class="product__item__text"> 
-                                    <h6><a href="#">Kalimba 17 phím</a></h6> 
-                                    <h5>500.000đ</h5> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <div class="product__pagination"> 
-                        <a href="#">1</a> 
-                        <a href="#">2</a> 
-                        <a href="#">3</a> 
-                        <a href="#"><i class="fa fa-long-arrow-right"></i></a> 
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-    </section> 
-    <footer class="footer spad"> 
-        <div class="container"> 
-            <div class="row"> 
-                <div class="col-lg-3 col-md-6 col-sm-6"> 
-                    <div class="footer__about"> 
-                        <div class="footer__about__logo"> 
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a> 
-                        </div> 
-                        <ul> 
-                            <li>Địa chỉ: 123 Đường CMT8, Q3, TP.HCM</li> 
-                            <li>Phone: 1900 1234</li> 
-                            <li>Email: support@musicstore.vn</li> 
-                        </ul> 
-                    </div> 
-                </div> 
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1"> 
-                    <div class="footer__widget"> 
-                        <h6>Liên kết Hữu ích</h6> 
-                        <ul> 
-                            <li><a href="#">Về chúng tôi</a></li> 
-                            <li><a href="#">Chính sách bảo hành</a></li> 
-                            <li><a href="#">Chính sách đổi trả</a></li> 
-                            <li><a href="#">Thông tin giao hàng</a></li> 
-                            <li><a href="#">Chính sách bảo mật</a></li> 
-                            <li><a href="#">Hướng dẫn trả góp</a></li> 
-                        </ul> 
-                        <ul> 
-                            <li><a href="#">Hệ thống cửa hàng</a></li> 
-                            <li><a href="#">Dịch vụ sửa chữa</a></li> 
-                            <li><a href="#">Tuyển dụng</a></li> 
-                            <li><a href="#">Liên hệ</a></li> 
-                            <li><a href="#">Tin tức</a></li> 
-                            <li><a href="#">Hỏi đáp</a></li> 
-                        </ul> 
-                    </div> 
-                </div> 
-                <div class="col-lg-4 col-md-12"> 
-                    <div class="footer__widget"> 
-                        <h6>Đăng ký Nhận tin</h6> 
-                        <p>Nhận thông tin về sản phẩm mới và các chương trình khuyến mãi.</p> 
-                        <form action="#"> 
-                            <input type="text" placeholder="Nhập email của bạn"> 
-                            <button type="submit" class="site-btn">Đăng ký</button> 
-                        </form> 
-                        <div class="footer__widget__social"> 
-                            <a href="#"><i class="fa fa-facebook"></i></a> 
-                            <a href="#"><i class="fa fa-instagram"></i></a> 
-                            <a href="#"><i class="fa fa-twitter"></i></a> 
-                            <a href="#"><i class="fa fa-pinterest"></i></a> 
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-            <div class="row"> 
-                <div class="col-lg-12"> 
-                    <div class="footer__copyright"> 
-                        <div class="footer__copyright__text"><p>Copyright 
-&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This 
-template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a 
-href="https://colorlib.com" target="_blank">Colorlib</a> 
-  </p></div> 
-                        <div class="footer__copyright__payment"><img src="img/payment-item.png" 
-alt=""></div> 
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-    </footer> 
-    <script src="js/jquery-3.3.1.min.js"></script> 
-    <script src="js/bootstrap.min.js"></script> 
-    <script src="js/jquery.nice-select.min.js"></script> 
-    <script src="js/jquery-ui.min.js"></script> 
-    <script src="js/jquery.slicknav.js"></script> 
-    <script src="js/mixitup.min.js"></script> 
-    <script src="js/owl.carousel.min.js"></script> 
-    <script src="js/main.js"></script> 
- 
- 
- 
-</body> 
- 
-</html> 
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-R">
+    <meta name="description" content="MusicStore - Danh sách sản phẩm">
+    <meta name="keywords" content="Guitar, Piano, Trống, Ukulele, Nhạc cụ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MusicStore | Sản Phẩm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=
+ swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+        #toast-notification {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 9999;
+            right: 30px;
+            bottom: 30px;
+            font-size: 17px;
+            opacity: 0;
+            transition: opacity 0.5s, bottom 0.5s;
+        }
+
+        #toast-notification.show {
+            visibility: visible;
+            opacity: 1;
+            bottom: 50px;
+        }
+
+        .product__item__pic {
+            position: relative;
+        }
+
+        .product__badge {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            padding: 5px 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 2px;
+            z-index: 1;
+        }
+
+        .badge-new {
+            background-color: #36a300;
+        }
+
+        .badge-soldout {
+            background-color: #d63031;
+        }
+
+        .badge-hot {
+            background-color: #e17055;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #7fad39;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+    </style>
+    </head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+            <div class="header__cart__price">Giỏ hàng: <span>5.200.000đ</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <img src="img/language.png" alt="">
+                <div>Tiếng Việt</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Tiếng Việt</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="header__top__right__auth">
+                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li><a href="./index.html">Trang chủ</a></li>
+                <li class="active"><a href="./shop-grid.html">Sản phẩm</a></li>
+                <li><a href="#">Trang khác</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Chi tiết sản phẩm</a></li>
+                        <li><a href="./shoping-cart.html">Giỏ hàng</a></li>
+                        <li><a href="./checkout.html">Thanh toán</a></li>
+                        <li><a href="./blog-details.html">Chi tiết Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> support@musicstore.vn</li>
+                <li>Miễn phí vận chuyển cho đơn hàng trên 3.000.000đ</li>
+            </ul>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> support@musicstore.vn</li>
+                                <li>Miễn phí vận chuyển cho đơn hàng trên 3.000.000đ</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="header__top__right__language">
+                                <img src="img/language.png" alt="">
+                                <div>Tiếng Việt</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a href="#">Tiếng Việt</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./index.html">Trang chủ</a></li>
+                            <li class="active"><a href="./shop-grid.html">Sản phẩm</a></li>
+                            <li><a href="#">Trang khác</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">Chi tiết sản phẩm</a></li>
+                                    <li><a href="./shoping-cart.html">Giỏ hàng</a></li>
+                                    <li><a href="./checkout.html">Thanh toán</a></li>
+                                    <li><a href="./blog-details.html">Chi tiết Blog</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__cart">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i>
+                                    <span>3</span></a></li>
+                        </ul>
+                        <div class="header__cart__price">Giỏ hàng:
+                            <span>5.200.000đ</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Danh Mục Nhạc Cụ</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">Guitar Acoustic</a></li>
+                            <li><a href="#">Guitar Electric</a></li>
+                            <li><a href="#">Piano & Keyboard</a></li>
+                            <li><a href="#">Trống & Percussion</a></li>
+                            <li><a href="#">Ukulele</a></li>
+                            <li><a href="#">Violin & Nhạc cụ dây</a></li>
+                            <li><a href="#">Thiết bị Âm thanh</a></li>
+                            <li><a href="#">Phụ kiện (Dây đàn, Amply)</a></li>
+                            <li><a href="#">Sáo & Nhạc cụ hơi</a></li>
+                            <li><a href="#">Nhạc cụ dân tộc</a></li>
+                            <li><a href="#">Sách nhạc & Giáo trình</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="#">
+                                <div class="hero__search__categories">
+                                    Tất cả
+                                    <span class="arrow_carrot-down"></span>
+                                </div>
+                                <input type="text" placeholder="Bạn tìm nhạc cụ gì?">
+                                <button type="submit" class="site-btn">TÌM KIẾM</button>
+                            </form>
+                        </div>
+                        <div class="hero__search__phone">
+                            <div class="hero__search__phone__icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="hero__search__phone__text">
+                                <h5>1900 1234</h5>
+                                <span>Hỗ trợ 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Cửa Hàng MusicStore</h2>
+                        <div class="breadcrumb__option">
+                            <a href="./index.html">Trang chủ</a>
+                            <span>Sản phẩm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-5">
+                    <div class="sidebar">
+                        <div class="sidebar__item">
+                            <h4>Danh Mục</h4>
+                            <ul>
+                                <li><a href="#">Guitar Acoustic</a></li>
+                                <li><a href="#">Guitar Electric</a></li>
+                                <li><a href="#">Piano & Keyboard</a></li>
+                                <li><a href="#">Trống & Percussion</a></li>
+                                <li><a href="#">Ukulele</a></li>
+                                <li><a href="#">Violin & Nhạc cụ dây</a></li>
+                                <li><a href="#">Thiết bị Âm thanh</a></li>
+                                <li><a href="#">Phụ kiện</a></li>
+                                <li><a href="#">Sáo & Nhạc cụ hơi</a></li>
+                                <li><a href="#">Nhạc cụ dân tộc</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__item">
+                            <h4>Lọc theo giá</h4>
+                            <div class="price-range-wrap">
+                                <div class="price-range ui-slider ui-corner-all ui-slider-horizontal
+ui-widget ui-widget-content" data-min="500" data-max="50000">
+                                    <div class="ui-slider-range
+ui-corner-all ui-widget-header"></div>
+                                    <span tabindex="0" class="ui-slider-handle ui-corner-all
+ui-state-default"></span>
+                                    <span tabindex="0" class="ui-slider-handle ui-corner-all
+ui-state-default"></span>
+                                </div>
+                                <div class="range-slider">
+                                    <div class="price-input">
+                                        <input type="text" id="minamount">
+                                        <input type="text" id="maxamount">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar__item sidebar__item__color--option">
+                            <h4>Thương Hiệu</h4>
+                            <div class="sidebar__item__color
+sidebar__item__color--white">
+                                <label for="fender">
+                                    Fender
+                                    <input type="radio" id="fender">
+                                </label>
+                            </div>
+                            <div class="sidebar__item__color sidebar__item__color--gray">
+                                <label for="yamaha">
+                                    Yamaha
+                                    <input type="radio" id="yamaha">
+                                </label>
+                            </div>
+                            <div class="sidebar__item__color sidebar__item__color--red">
+                                <label for="roland">
+                                    Roland
+                                    <input type="radio" id="roland">
+                                </label>
+                            </div>
+                            <div class="sidebar__item__color sidebar__item__color--black">
+                                <label for="taylor">
+                                    Taylor
+                                    <input type="radio" id="taylor">
+                                </label>
+                            </div>
+                            <div class="sidebar__item__color sidebar__item__color--blue">
+                                <label for="casio">
+                                    Casio
+                                    <input type="radio" id="casio">
+                                </label>
+                            </div>
+                            <div class="sidebar__item__color sidebar__item__color--green">
+                                <label for="kawai">
+                                    Kawai
+                                    <input type="radio" id="kawai">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sidebar__item">
+                            <h4>Tình Trạng</h4>
+                            <div class="sidebar__item__size">
+                                <label for="new">
+                                    Hàng mới
+                                    <input type="radio" id="new">
+                                </label>
+                            </div>
+                            <div class="sidebar__item__size">
+                                <label for="sale">
+                                    Giảm giá
+                                    <input type="radio" id="sale">
+                                </label>
+                            </div>
+                            <div class="sidebar__item__size">
+                                <label for="bestseller">
+                                    Bán chạy
+                                    <input type="radio" id="bestseller">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sidebar__item">
+                            <div class="latest-product__text">
+                                <h4>Hàng Mới Về</h4>
+                                <div class="latest-product__slider
+owl-carousel">
+                                    <div class="latest-prdouct__slider__item">
+                                        <a href="#" class="latest-product__item">
+                                            <div class="latest-product__item__pic">
+                                                <img src="img/latest-product/lp1.jpg" alt="">
+                                            </div>
+                                            <div class="latest-product__item__text">
+                                                <h6>Micro Shure SM58</h6>
+                                                <span>2.800.000đ</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="latest-product__item">
+                                            <div class="latest-product__item__pic">
+                                                <img src="img/latest-product/lp2.jpg" alt="">
+                                            </div>
+                                            <div class="latest-product__item__text">
+                                                <h6>Violin Lazer 4/4</h6>
+                                                <span>3.100.000đ</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="latest-product__item">
+                                            <div class="latest-product__item__pic">
+                                                <img src="img/latest-product/lp3.jpg" alt="">
+                                            </div>
+                                            <div class="latest-product__item__text">
+                                                <h6>Dây đàn Elixir</h6>
+                                                <span>450.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="latest-prdouct__slider__item">
+                                        <a href="#" class="latest-product__item">
+                                            <div class="latest-product__item__pic">
+                                                <img src="img/latest-product/lp4.jpg" alt="">
+                                            </div>
+                                            <div class="latest-product__item__text">
+                                                <h6>Trống Cajon</h6>
+                                                <span>1.200.000đ</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="latest-product__item">
+                                            <div class="latest-product__item__pic">
+                                                <img src="img/latest-product/lp5.jpg" alt="">
+                                            </div>
+                                            <div class="latest-product__item__text">
+                                                <h6>Kalimba 17 phím</h6>
+                                                <span>500.000đ</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="latest-product__item">
+                                            <div class="latest-product__item__pic">
+                                                <img src="img/latest-product/lp6.jpg" alt="">
+                                            </div>
+                                            <div class="latest-product__item__text">
+                                                <h6>Midi Controller Akai</h6>
+                                                <span>3.500.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-7">
+                    <div class="product__discount">
+                        <div class="section-title product__discount__title">
+                            <h2>Đang Giảm Giá</h2>
+                        </div>
+                        <div class="row">
+                            <div class="product__discount__slider owl-carousel">
+                                <div class="col-lg-4">
+                                    <div class="product__discount__item">
+                                        <div class="product__discount__item__pic set-bg" data-setbg="img/product/discount/pd-1.jpg">
+                                            <div class="product__discount__percent">-20%</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>Guitar</span>
+                                            <h5><a href="#">Guitar Classic C-40</a></h5>
+                                            <div class="product__item__price">2.500.000đ
+                                                <span>3.100.000đ</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="product__discount__item">
+                                        <div class="product__discount__item__pic set-bg" data-setbg="img/product/discount/pd-2.jpg">
+                                            <div class="product__discount__percent">-15%</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>Ukulele</span>
+                                            <h5><a href="#">Ukulele Concert</a></h5>
+                                            <div class="product__item__price">1.200.000đ
+                                                <span>1.400.000đ</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="product__discount__item">
+                                        <div class="product__discount__item__pic set-bg" data-setbg="img/product/discount/pd-3.jpg">
+                                            <div class="product__discount__percent">-10%</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>Phụ kiện</span>
+                                            <h5><a href="#">Amply NUX AC-25</a></h5>
+                                            <div class="product__item__price">3.400.000đ
+                                                <span>3.800.000đ</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="product__discount__item">
+                                        <div class="product__discount__item__pic set-bg" data-setbg="img/product/discount/pd-4.jpg">
+                                            <div class="product__discount__percent">-25%</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>Phụ kiện</span>
+                                            <h5><a href="#">Máy lên dây Tuner</a></h5>
+                                            <div class="product__item__price">150.000đ
+                                                <span>200.000đ</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-5">
+                                <div class="filter__sort">
+                                    <span>Sắp xếp theo</span> <select>
+                                        <option value="0">Mặc định</option>
+                                        <option value="0">Giá: Thấp đến Cao</option>
+                                        <option value="0">Giá: Cao đến Thấp</option>
+                                        <option value="0">Tên: A-Z</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div class="filter__found">
+                                    <h6><span>12</span> sản phẩm được tìm thấy</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-3">
+                                <div class="filter__option">
+                                    <span class="icon_grid-2x2"></span>
+                                    <span class="icon_ul"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+                                    <div class="product__badge badge-new">Mới</div>
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Guitar Acoustic Taylor 214ce" data-price="28.000.000đ" data-img="img/product/product-1.jpg" data-desc="Đàn Guitar Taylor 214ce là dòng sản phẩm cao cấp, âm thanh vang sáng, tích hợp EQ chất lượng cao."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Guitar Acoustic Taylor 214ce</a></h6>
+                                    <h5>28.000.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Keyboard Yamaha E373" data-price="5.200.000đ" data-img="img/product/product-2.jpg" data-desc="Keyboard Yamaha E373 với nhiều điệu nhạc và âm sắc, phù hợp cho người mới bắt đầu và học tập."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Keyboard Yamaha E373</a></h6>
+                                    <h5>5.200.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
+                                    <div class="product__badge badge-hot">Hot</div>
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Trống điện Roland TD-07" data-price="25.000.000đ" data-img="img/product/product-3.jpg" data-desc="Bộ trống điện Roland TD-07 mang lại cảm giác chơi chân thực, âm thanh chuyên nghiệp, lý tưởng cho luyện tập tại nhà."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Trống điện Roland TD-07</a></h6>
+                                    <h5>25.000.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-4.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Amply Fender Mustang LT25" data-price="4.500.000đ" data-img="img/product/product-4.jpg" data-desc="Amply Fender Mustang LT25 với nhiều hiệu ứng tích hợp, hoàn hảo cho việc luyện tập guitar điện."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Amply Fender Mustang LT25</a></h6>
+                                    <h5>4.500.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-5.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Guitar Electric Fender Strat" data-price="22.000.000đ" data-img="img/product/product-5.jpg" data-desc="Dòng guitar điện Fender Stratocaster huyền thoại, biểu tượng của âm nhạc Rock 'n' Roll."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Guitar Electric Fender Strat</a></h6>
+                                    <h5>22.000.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-6.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Piano điện Kawai KDP120" data-price="21.500.000đ" data-img="img/product/product-6.jpg" data-desc="Piano điện Kawai KDP120 với bàn phím nặng, âm thanh piano cơ chân thực, thiết kế sang trọng."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Piano điện Kawai KDP120</a></h6>
+                                    <h5>21.500.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Focusrite Scarlett 2i2" data-price="4.200.000đ" data-img="img/product/product-7.jpg" data-desc="Sound card Focusrite Scarlett 2i2 Gen 3, chuẩn thu âm phòng thu với 2 ngõ vào micro/instrument."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Focusrite Scarlett 2i2</a></h6>
+                                    <h5>4.200.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-8.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Ukulele Enya X1 Pro" data-price="2.100.000đ" data-img="img/product/product-8.jpg" data-desc="Đàn Ukulele Enya X1 Pro làm từ chất liệu HPL cao cấp, chịu được thời tiết, âm thanh trong trẻo."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Ukulele Enya X1 Pro</a></h6>
+                                    <h5>2.100.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-9.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Micro Shure SM58" data-price="2.800.000đ" data-img="img/product/product-9.jpg" data-desc="Micro Shure SM58 huyền thoại, lựa chọn hàng đầu cho ca hát live và thu âm, độ bền cực cao."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Micro Shure SM58</a></h6>
+                                    <h5>2.800.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-10.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Violin Lazer 4/4" data-price="3.100.000đ" data-img="img/product/product-10.jpg" data-desc="Đàn Violin Lazer cỡ 4/4, phù hợp cho người lớn và học sinh, đi kèm đầy đủ phụ kiện."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Violin Lazer 4/4</a></h6>
+                                    <h5>3.100.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-11.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Trống Cajon" data-price="1.200.000đ" data-img="img/product/product-11.jpg" data-desc="Trống Cajon âm thanh mộc mạc, phù hợp chơi acoustic, dã ngoại. Mặt trống cho tiếng bass sâu và treble rõ."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Trống Cajon</a></h6>
+                                    <h5>1.200.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-12.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#quickViewModal" data-name="Kalimba 17 phím" data-price="500.000đ" data-img="img/product/product-12.jpg" data-desc="Đàn Kalimba 17 phím (ngón tay cái) bằng gỗ, âm thanh thư giãn, dễ chơi, phù hợp cho mọi lứa tuổi."><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Kalimba 17 phím</a></h6>
+                                    <h5>500.000đ</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__pagination">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Địa chỉ: 123 Đường CMT8, Q3, TP.HCM</li>
+                            <li>Phone: 1900 1234</li>
+                            <li>Email: support@musicstore.vn</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Liên kết Hữu ích</h6>
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Chính sách bảo hành</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Thông tin giao hàng</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Hướng dẫn trả góp</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Hệ thống cửa hàng</a></li>
+                            <li><a href="#">Dịch vụ sửa chữa</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                            <li><a href="#">Hỏi đáp</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Đăng ký Nhận tin</h6>
+                        <p>Nhận thông tin về sản phẩm mới và các chương trình khuyến mãi.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Nhập email của bạn">
+                            <button type="submit" class="site-btn">Đăng ký</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text">
+                            <p>Copyright
+                                &copy;<script>
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | This
+                                template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            </p>
+                        </div>
+                        <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="quickViewModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="quick-view-img">
+                                <img src="" alt="Product Image" style="width: 100%;">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="quick-view-content">
+                                <h3></h3>
+                                <div class="product__details__price" style="font-size: 24px; font-weight: 700; color: #dd2222; margin-bottom: 15px;"></div>
+                                <p></p>
+                                <div class="product__details__quantity">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="primary-btn" style="background: #7fad39; color: white; padding: 10px 20px; display: inline-block; margin-top: 15px;">THÊM VÀO GIỎ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 15px; top: 10px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-notification"><i class="fa fa-check-circle" style="color: #7fad39;"></i> Sản phẩm đã thêm vào giỏ hàng!</div>
+
+    <button onclick="topFunction()" id="myBtn" title="Lên đầu trang"><i class="fa fa-arrow-up"></i></button>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.fa-shopping-cart').parent('a').click(function(e) {
+                e.preventDefault(); 
+                var x = document.getElementById("toast-notification");
+                x.className = "show";
+                
+                var $cartIcons = $('.header__cart ul li:nth-child(2) span, .humberger__menu__cart ul li:nth-child(2) span');
+                var currentCount = parseInt($cartIcons.first().text());
+                $cartIcons.text(currentCount + 1); 
+                
+                setTimeout(function() {
+                    x.className = x.className.replace("show", "");
+                }, 3000);
+            });
+        });
+
+        $('#quickViewModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); 
+            
+            var productName = button.data('name');
+            var productPrice = button.data('price');
+            var productImg = button.data('img');
+            var productDesc = button.data('desc');
+
+            var modal = $(this);
+            modal.find('.quick-view-img img').attr('src', productImg);
+            modal.find('.quick-view-content h3').text(productName);
+            modal.find('.product__details__price').text(productPrice);
+            modal.find('.quick-view-content p').text(productDesc || 'Mô tả chi tiết sản phẩm đang được cập nhật...');
+        });
+
+
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        }
+    </script>
+    </body>
+
+</html>
